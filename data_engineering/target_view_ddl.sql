@@ -5,6 +5,7 @@ Team: Data Engineering
 Date: 2026-01-04
 Parameters: vsch - View Schema identifier (e.g., VIEW) | tsch - Target Schema identifier (e.g., DE))
 */
+--!jinja
 CREATE VIEW IF NOT EXISTS HACKATHON_DB.HACKATHON_{{vsch}}_SCH.TARGET_TABLE_VIEW
 AS
 SELECT
