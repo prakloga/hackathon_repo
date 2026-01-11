@@ -2,7 +2,7 @@
 Script: gpg_decryption_udtf.sql
 Description: DDL statements to create the GPG decryption UDTF.
 Team: Data Engineering
-Date: 2026-01-04
+Date: 2026-01-10
 Parameters: csch - common Schema identifier (e.g., COMMON) | tsch - Target Schema identifier (e.g., DE))
 */
 CREATE FUNCTION IF NOT EXISTS HACKATHON_DB.HACKATHON_{{tsch}}_SCH.GPG_DECRYPTION_UDTF(file_path string)
@@ -15,7 +15,7 @@ secrets = ('pvt_key'=HACKATHON_DB.HACKATHON_{{csch}}_SCH.PGP_PRIVATE_KEY
 packages=('snowflake-snowpark-python', 'python-gnupg')
 handler='gpgdecryptor'
 log_level=info
-comment='hactathon GPG Decryption UDTF'
+comment = 'Created by Prakash Loganathan'
 as
 $$
 import _snowflake

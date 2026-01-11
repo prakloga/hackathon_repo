@@ -2,11 +2,12 @@
 Script: target_view_ddl.sql
 Description: DDL statements to create the target view.
 Team: Data Engineering
-Date: 2026-01-04
+Date: 2026-01-10
 Parameters: vsch - View Schema identifier (e.g., VIEW) | tsch - Target Schema identifier (e.g., DE))
 */
 --!jinja
 CREATE VIEW IF NOT EXISTS HACKATHON_DB.HACKATHON_{{vsch}}_SCH.TARGET_TABLE_VIEW
+COMMENT = 'Created by Prakash Loganathan'
 AS
 SELECT
  EMP_ID

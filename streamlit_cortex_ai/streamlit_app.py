@@ -1,6 +1,8 @@
 #Script: streamlit_app.py
 #Description: Create a simple Streamlit interface that accepts a user's prompt
 #             ,sends it to a Snowflake Cortex AI_COMPLETE function, and gets a response
+#Created by Prakash Loganathan
+
 import streamlit as st
 from snowflake.snowpark.functions import ai_complete
 import json
