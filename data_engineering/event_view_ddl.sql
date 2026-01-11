@@ -2,10 +2,11 @@
 Script: gpg_decryption_udtf.sql
 Description: DDL statements to create the GPG decryption UDTF.
 Team: Data Engineering
-Date: 2026-01-04
+Date: 2026-01-10
 Parameters: csch - common Schema identifier (e.g., COMMON)
 */
 CREATE SECURE VIEW IF NOT EXISTS HACKATHON_DB.HACKATHON_{{csch}}_SCH.HACKATHON_EVENT_TABLE_VIEW
+COMMENT = 'Created by Prakash Loganathan'
 AS
 SELECT
  convert_timezone('UTC','America/Chicago', TIMESTAMP) as TIMESTAMP_CST

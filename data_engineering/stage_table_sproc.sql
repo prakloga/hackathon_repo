@@ -2,7 +2,7 @@
 Script: stage_table_sproc.sql
 Description: DDL statements to create the stage table SPROC.
 Team: Data Engineering
-Date: 2026-01-04
+Date: 2026-01-10
 Parameters: tsch - Target Schema identifier (e.g., DE))
 */
 CREATE PROCEDURE IF NOT EXISTS HACKATHON_DB.HACKATHON_{{tsch}}_SCH.STAGE_TABLE_SPROC(DB_NAME string, SCHEMA_NAME string, STG_SCHEMA_NAME string)
@@ -11,7 +11,7 @@ language python
 runtime_version = '3.11'
 handler = 'stage_table_process'
 packages = ('snowflake-snowpark-python')
-comment = 'hactathon stage table process SPROC'
+comment = 'Created by Prakash Loganathan'
 log_level=info
 execute as owner
 as
