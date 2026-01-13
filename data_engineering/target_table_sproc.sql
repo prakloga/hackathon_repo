@@ -27,7 +27,7 @@ def target_table_process(session: Session, db_name: str, tgt_schema_name: str, s
         conn = session.connection
         cur = conn.cursor()
        
-        sql_stmt = f"""INSERT INTO {db_name}.{tgt_schema_name}.TARGET_TABLE
+        sql_stmt = f"""INSERT OVERWRITE INTO {db_name}.{tgt_schema_name}.TARGET_TABLE
                     SELECT
                      EMP_ID
                     ,LAST_NAME
