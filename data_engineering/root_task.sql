@@ -105,7 +105,7 @@ EXECUTE IMMEDIATE $$
     --- Send HTML to email
     CALL SYSTEM$SEND_EMAIL(
         'ALERTS_EMAIL_INT',
-        'prakloga1205@gmail.com',
+        'prakloga1205@gmail.com,happysanthosh@gmail.com',
         'SNOWFLAKE TASKs Run Summary',
         :summary_html,
         'text/html');
